@@ -1,10 +1,12 @@
-import { Alerta } from './../../shared/models/alerta';
-import { Filme } from './../../shared/models/filme';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 import { ValidarCamposService } from './../../shared/components/campos/validar-campos.service';
 import { FilmesService } from 'src/app/core/filmes.service';
-import { MatDialog } from '@angular/material/dialog';
+import { Filme } from './../../shared/models/filme';
+import { Alerta } from './../../shared/models/alerta';
 import { AlertaComponent } from 'src/app/shared/components/alerta/alerta.component';
 
 @Component({
@@ -22,6 +24,7 @@ export class CadastroFilmesComponent implements OnInit {
     public dialog: MatDialog,
     private fb: FormBuilder,
     private filmeService: FilmesService,
+    private router: Router
   ) { }
 
   get f() {
@@ -67,9 +70,24 @@ export class CadastroFilmesComponent implements OnInit {
         } as Alerta
       };
       const dialogRef = this.dialog.open(AlertaComponent, config);
+      dialogRef.afterClosed().subscribe((opcao: boolean) => {
+        if (opcao) {
+          this.router.navigateByUrl('filmes');
+        } else {
+          this.reiniciarForm();
+        }
+      });
     },
       () => {
-        alert('Erro ao salvar');
+        const config = {
+          data: {
+            titulo: 'Erro ao salvar o registro!',
+            descricao: 'Não conseguimos salvar seu registro, tente novamente por favor.',
+            corBtnSucesso: 'warn',
+            btnSucesso: 'Fechar',
+          } as Alerta
+        };
+        this.dialog.open(AlertaComponent, config);
       });
   }
 

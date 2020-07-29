@@ -199,6 +199,26 @@
       "urlIMDb": "",
       "genero": "Ação",
       "id": 20
+    },
+    {
+      "titulo": "Teste 8",
+      "urlFoto": "",
+      "dtLancamento": "2020-07-08T03:00:00.000Z",
+      "descricao": "",
+      "nota": 8.2,
+      "urlIMDb": "",
+      "genero": "Romance",
+      "id": 21
+    },
+    {
+      "titulo": "Teste 9",
+      "urlFoto": "",
+      "dtLancamento": "2020-07-16T03:00:00.000Z",
+      "descricao": "",
+      "nota": 9,
+      "urlIMDb": "",
+      "genero": "Aventura",
+      "id": 22
     }
   ]
 }

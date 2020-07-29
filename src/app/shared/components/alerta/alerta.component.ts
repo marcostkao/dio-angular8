@@ -10,7 +10,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 export class AlertaComponent implements OnInit {
 
   alerta = {
-    titulo: 'Sucesso!',
+    titulo: 'SUCESSO!',
     descricao: 'Seu registro foi cadastrado.',
     btnSucesso: 'OK',
     btnCancelar: 'Cancelar',
@@ -25,7 +25,7 @@ export class AlertaComponent implements OnInit {
 
   ngOnInit() {
     if (this.data) {
-      this.alerta.titulo = this.data.tituto || this.alerta.titulo;
+      this.alerta.titulo = this.data.titulo || this.alerta.titulo;
       this.alerta.descricao = this.data.descricao || this.alerta.descricao;
       this.alerta.btnSucesso = this.data.btnSucesso || this.alerta.btnSucesso;
       this.alerta.btnCancelar = this.data.btnCancelar || this.alerta.btnCancelar;
