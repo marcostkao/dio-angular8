@@ -109,6 +109,16 @@
       "urlIMDb": "https://www.imdb.com/title/tt2527338/?ref_=vi_md_ti",
       "genero": "Aventura",
       "id": 11
+    },
+    {
+      "titulo": "Greyhound: Na Mira do Inimigo ",
+      "urlFoto": "https://www.imdb.com/title/tt6048922/mediaviewer/rm3673926145?ref_=tt_ov_i",
+      "dtLancamento": "2020-07-10T03:00:00.000Z",
+      "descricao": "Early in World War II, an inexperienced U.S. Navy captain must lead an Allied convoy being stalked by Nazi U-boat wolfpacks",
+      "nota": 7.1,
+      "urlIMDb": "https://www.imdb.com/title/tt6048922/?ref_=hm_fanfav_tt_4_pd_fp1",
+      "genero": "Drama",
+      "id": 12
     }
   ]
 }
